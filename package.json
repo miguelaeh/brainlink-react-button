@@ -1,0 +1,17 @@
+{
+  "name": "react-button",
+  "version": "0.1.0",
+  "description": "BrainLink connection button for React/Next.js applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "react",
+    "nextjs",
+    "next"
+  ],
+  "author": "Miguel A. Cabrera Minagorri",
+  "license": "Apache-2.0"
+}
