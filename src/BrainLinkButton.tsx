@@ -13,7 +13,6 @@ export default function BrainLinkButton() {
 
     useEffect(() => {
         const handleConnectionChange = () => {
-            console.log("brainLinkConnectedChange");
             setBrainLinkConnected(BrainLink.isConnected());
         };
 
