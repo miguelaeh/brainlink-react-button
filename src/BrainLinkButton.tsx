@@ -2,7 +2,7 @@ import * as BrainLink from "@brainlink/spa-sdk";
 import React, { useEffect, useState } from "react";
 
 export default function BrainLinkButton() {
-    const [brainLinkConnected, setBrainLinkConnected] = useState(false);
+    const [brainLinkConnected, setBrainLinkConnected] = useState<boolean>(false);
 
     const connectBrainLink = async () => {
         // The startCodeExchange redirects to the authorize endpoint which loses the state after the redirect,

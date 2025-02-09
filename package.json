@@ -4,7 +4,7 @@
   "description": "BrainLink connection button for React/Next.js applications",
   "main": "dist/BrainLinkButton.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist && npx tsc",
     "publish-to-npm": "npm publish --access public"
   },
   "keywords": [
@@ -20,17 +20,22 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@brainlink/spa-sdk": "^0.1.3",
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
-    "@babel/preset-react": "^7.26.3"
+    "@babel/preset-react": "^7.26.3",
+    "@brainlink/spa-sdk": "^0.1.3",
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
   },
   "type": "module",
   "exports": {
     ".": {
-	   "import": "./dist/BrainLinkButton.js"
+      "import": "./dist/BrainLinkButton.js"
     }
   },
-  "files": [ "dist/", "README.md" ]
+  "files": [
+    "dist/",
+    "README.md"
+  ]
 }
