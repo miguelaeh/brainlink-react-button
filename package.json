@@ -2,9 +2,10 @@
   "name": "react-button",
   "version": "0.1.0",
   "description": "BrainLink connection button for React/Next.js applications",
-  "main": "index.js",
+  "main": "dist/BrainLinkButton.js",
+  "files": ["dist"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir dist"
   },
   "keywords": [
     "ai",
@@ -13,5 +14,15 @@
     "next"
   ],
   "author": "Miguel A. Cabrera Minagorri",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-react": "^7.26.3"
+  }
 }
