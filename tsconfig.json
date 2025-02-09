@@ -4,10 +4,12 @@
     "module": "ESNext",
     "target": "es2020",
     "declaration": true,
+    "emitDeclarationOnly": true,
     "sourceMap": true,
     "strict": true,
     "jsx": "react",
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "isolatedModules": true
   },
   "include": ["src"]
 }
