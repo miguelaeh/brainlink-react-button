@@ -24,7 +24,18 @@ export default function BrainLinkButton() {
     }, []);
 
     return (
-        <button className={`${brainLinkConnected ? "bg-green-500" : "bg-gray-500"} text-white px-4 py-2 rounded-md font-extrabold`} onClick={connectBrainLink}>
+        <button style={{
+                backgroundColor: brainLinkConnected ? "#10B981" : "#6B7280",
+                paddingTop: "0.5rem",
+                paddingBottom: "0.5rem",
+                paddingLeft: "1rem",
+                paddingRight: "1rem",
+                borderRadius: "0.375rem",
+                fontWeight: 800,
+                color: "#ffffff",
+            }}
+            onClick={connectBrainLink}
+        >
             BrainLink connect
         </button>
     );
