@@ -25,18 +25,20 @@ export default function BrainLinkButton() {
 
     return (
         <button style={{
-                backgroundColor: brainLinkConnected ? "#10B981" : "#6B7280",
-                paddingTop: "0.5rem",
-                paddingBottom: "0.5rem",
-                paddingLeft: "1rem",
-                paddingRight: "1rem",
-                borderRadius: "0.375rem",
-                fontWeight: 800,
-                color: "#ffffff",
-            }}
+            background: brainLinkConnected ? "linear-gradient(to right, #34D399 0%, #059669 100%)" : "linear-gradient(to right, #9CA3AF 0%, #6B7280 100%)",
+            paddingTop: "0.5rem",
+            paddingBottom: "0.5rem",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            borderRadius: "0.375rem",
+            fontWeight: 800,
+            color: "#ffffff",
+        }}
             onClick={connectBrainLink}
         >
-            BrainLink connect
+            { !brainLinkConnected &&<span style={{ fontSize: "0.75rem", fontWeight: 500 }}>Connect your AI with</span> }
+            <br />
+            BrainLink
         </button>
     );
 }
