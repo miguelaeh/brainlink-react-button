@@ -1,13 +1,17 @@
 import * as BrainLink from "@brainlink/spa-sdk";
 import React, { useEffect, useState } from "react";
 
-export default function BrainLinkButton() {
+/**
+ * @param appClientId The brainlink client app id. To obtain this register the app on the brainlink dashboard
+ * @param appCallbackUrl The callback URL for the brainlink client app. If not provided, the current page will be used
+ */
+export default function BrainLinkButton({ appClientId, appCallbackUrl }: { appClientId: string, appCallbackUrl?: string }) {
     const [brainLinkConnected, setBrainLinkConnected] = useState<boolean>(false);
 
     const connectBrainLink = async () => {
         // The startCodeExchange redirects to the authorize endpoint which loses the state after the redirect,
         // but we do this because it could skip the start if brainlink is already connected
-        await BrainLink.startCodeExchange();
+        await BrainLink.startCodeExchange(appClientId, appCallbackUrl);
         setBrainLinkConnected(BrainLink.isConnected());
     }
 
@@ -36,7 +40,7 @@ export default function BrainLinkButton() {
         }}
             onClick={connectBrainLink}
         >
-            { !brainLinkConnected &&<span style={{ fontSize: "0.75rem", fontWeight: 500 }}>Connect your AI with</span> }
+            <span style={{ fontSize: "0.75rem", fontWeight: 500 }}>{ brainLinkConnected ? "AI connected via" : "Connect your AI with" }</span>
             <br />
             BrainLink
         </button>

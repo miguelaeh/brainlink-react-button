@@ -22,7 +22,7 @@ import BrainLinkButton from "@brainlink/react-button";
 Use the button in your JSX code:
 
 ```html
-<BrainLinkButton />
+<BrainLinkButton appClientId="your_brainlink_app_client_ID" />
 ```
 
 ## Full Examples
