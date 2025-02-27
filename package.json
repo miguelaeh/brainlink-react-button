@@ -1,6 +1,6 @@
 {
   "name": "@brainlink/react-button",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "BrainLink connection button for React/Next.js applications",
   "main": "dist/BrainLinkButton.js",
   "types": "dist/BrainLinkButton.d.ts",
